@@ -60,6 +60,16 @@ public class Atividade {
 
                         Conta conta = new Conta(agencia, cpf, tipo, valor);
                         System.out.printf("\nConta aberta com sucesso! Saldo : %f\n", conta.getSaldo());
+                        break;
+
+                    case 4:
+                        System.out.print("\nIdentifique-se com o CPF do Cliente cadastrado: ");
+                        cpf = String.valueOf(scanner.nextLine());
+
+                        new CaixaEletronico(agencia, cpf);
+
+                        break;
+
                 }
 
             }
