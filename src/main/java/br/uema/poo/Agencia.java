@@ -1,5 +1,6 @@
 package br.uema.poo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Agencia {
@@ -11,6 +12,7 @@ public class Agencia {
     public Agencia(String nome, String cnpj) {
         this.nome = nome;
         this.cnpj = cnpj;
+        clientes = new ArrayList<>();
     }
 
     public String getNome() {
@@ -27,5 +29,13 @@ public class Agencia {
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
+    }
+
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
     }
 }

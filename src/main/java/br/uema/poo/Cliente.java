@@ -1,13 +1,26 @@
 package br.uema.poo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cliente {
 
     private String nome;
     private String cpf;
+    private List<Conta> contas;
+
+    public List<Conta> getContas() {
+        return contas;
+    }
+
+    public void setContas(List<Conta> contas) {
+        this.contas = contas;
+    }
 
     public Cliente(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
+        this.contas = new ArrayList<>();
     }
 
     public String getNome() {
