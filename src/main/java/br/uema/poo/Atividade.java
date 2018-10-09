@@ -22,6 +22,7 @@ public class Atividade {
                 System.out.printf(" 2 - Listar Clientes (%d)\n", agencia.getClientes().size());
                 System.out.println(" 3 - Abrir Conta");
                 System.out.println(" 4 - Acessar Caixa Eletrônico");
+                System.out.println(" 5 - Encerrar sistema");
 
                 System.out.print("\nEscolha: ");
 
@@ -43,9 +44,9 @@ public class Atividade {
                         System.out.print("\nLista de Clientes:\n");
 
                         agencia.getClientes()
-                            .forEach(cli -> System.out.printf("Nome: %s, CPF: %s\n" +
-                                    "-----------------------------------------------------------------------------------\n",
-                                    cli.getNome(), cli.getCpf()));
+                                .forEach(cli -> System.out.printf("Nome: %s, CPF: %s\n" +
+                                                "-----------------------------------------------------------------------------------\n",
+                                        cli.getNome(), cli.getCpf()));
                         break;
 
                     case 3:
@@ -59,7 +60,6 @@ public class Atividade {
                         valor = Double.parseDouble(scanner.nextLine());
 
                         Conta conta = new Conta(agencia, cpf, tipo, valor);
-                        System.out.printf("\nConta aberta com sucesso! Saldo : %f\n", conta.getSaldo());
                         break;
 
                     case 4:
@@ -70,6 +70,8 @@ public class Atividade {
 
                         break;
 
+                    default:
+                        return;
                 }
 
             }

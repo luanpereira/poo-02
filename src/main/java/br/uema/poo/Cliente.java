@@ -8,6 +8,7 @@ public class Cliente {
     private String nome;
     private String cpf;
     private List<Conta> contas;
+    private Conta contaSelecionada;
 
     public List<Conta> getContas() {
         return contas;
@@ -37,5 +38,13 @@ public class Cliente {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public Conta getContaSelecionada() {
+        return contaSelecionada;
+    }
+
+    public void setContaSelecionada(Conta contaSelecionada) {
+        this.contaSelecionada = contaSelecionada;
     }
 }
